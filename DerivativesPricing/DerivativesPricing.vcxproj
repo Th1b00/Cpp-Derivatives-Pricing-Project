@@ -22,6 +22,10 @@
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="BlackScholesPricer.h" />
     <ClInclude Include="CallOption.h" />
+    <ClInclude Include="CRRPricer.h" />
+    <ClInclude Include="EuropeanDigitalCallOption.h" />
+    <ClInclude Include="EuropeanDigitalOption.h" />
+    <ClInclude Include="EuropeanDigitalPutOption.h" />
     <ClInclude Include="EuropeanVanillaOption.h" />
     <ClInclude Include="Option.h" />
     <ClInclude Include="PutOption.h" />
@@ -29,6 +33,10 @@
   <ItemGroup>
     <ClCompile Include="BlackScholesPricer.cpp" />
     <ClCompile Include="CallOption.cpp" />
+    <ClCompile Include="CRRPricer.cpp" />
+    <ClCompile Include="EuropeanDigitalCallOption.cpp" />
+    <ClCompile Include="EuropeanDigitalOption.cpp" />
+    <ClCompile Include="EuropeanDigitalPutOption.cpp" />
     <ClCompile Include="EuropeanVanillaOption.cpp" />
     <ClCompile Include="Option.cpp" />
     <ClCompile Include="PutOption.cpp" />
