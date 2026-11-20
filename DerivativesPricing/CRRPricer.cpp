@@ -9,6 +9,8 @@ CRRPricer::CRRPricer(Option* option, int depth, double asset_price, double up,
       _down(down), _interest_rate(interest_rate), _q(0.0), _tree(depth),
       _computed(false) {
     if (_option == nullptr) throw std::invalid_argument("Option must not be null");
+    if (_option->isAsianOption())
+        throw std::invalid_argument("CRRPricer cannot price Asian options");
     if (depth < 0) throw std::invalid_argument("Depth must be nonnegative");
     if (!(asset_price > 0.0) || !std::isfinite(asset_price))
         throw std::invalid_argument("Asset price must be positive and finite");

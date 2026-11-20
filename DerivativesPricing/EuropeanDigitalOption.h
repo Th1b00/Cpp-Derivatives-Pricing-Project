@@ -10,10 +10,9 @@ private:
 
 public:
     friend class BlackScholesPricer;
+    EuropeanDigitalOption(double expiry, double strike);
+    virtual optionType GetOptionType() const = 0;
 
 protected:
     double getDigitalStrike() const { return _strike; }
-
-    EuropeanDigitalOption(double expiry, double strike);
-    virtual optionType GetOptionType() const = 0;
 };
