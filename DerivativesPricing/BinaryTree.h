@@ -1,7 +1,9 @@
 #pragma once
 
 #include <cstddef>
+#include <iomanip>
 #include <iostream>
+#include <string>
 #include <stdexcept>
 #include <vector>
 
@@ -42,5 +44,22 @@ public:
             }
             std::cout << '\n';
         }
+        std::cout << '\n';
+
+        for (int n = 0; n <= _depth; ++n) {
+            std::string indent(static_cast<std::size_t>(2 * (_depth - n)), ' ');
+
+            std::cout << indent;
+            for (int i = 0; i <= n; ++i)
+                std::cout << std::setw(3) << _tree[static_cast<std::size_t>(n)][static_cast<std::size_t>(i)] << ' ';
+            std::cout << '\n';
+
+            if (n < _depth) {
+                std::cout << indent;
+                for (int i = 0; i <= n; ++i) std::cout << " / \\";
+                std::cout << '\n';
+            }
+        }
+        std::cout << '\n';
     }
 };

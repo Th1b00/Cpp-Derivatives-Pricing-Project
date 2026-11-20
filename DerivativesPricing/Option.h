@@ -12,5 +12,6 @@ class Option
         virtual ~Option() = default;
         virtual double payoffPath(const std::vector<double>& path) const;
         virtual bool isAsianOption() const;
+        virtual bool isAmericanOption() const;
 };
 
